@@ -1,0 +1,38 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+
+                    const button = document.getElementById('attn-btn');
+
+                    button.addEventListener('click', async _ => {
+                    try {     
+                        const response = await fetch('http://192.168.0.22:8080/', {
+                        method: 'post',
+                        });
+                        console.log('Completed!', response);
+                    } catch(err) {
+                        console.error(`Error: ${err}`);
+                    }
+                    });
+        });
+    </script>
+    <style>
+
+    .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    </style>
+</head>
+<div class=center><h1>
+    attention
+</h1></div>
+
+  <div class="center">
+    <button id='attn-btn' style="min-width: 200px;min-height:100px;max-width:90%;max-height:50%;border-color:pink">	&#x1F9A9; attention &#x1F9A9;</button>
+</div>
+</html>
