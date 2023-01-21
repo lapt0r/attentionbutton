@@ -9,7 +9,7 @@
 
                     button.addEventListener('click', async _ => {
                     try {     
-                        const response = await fetch('http://192.168.0.22:8080/', {
+                        const response = await fetch('http://192.168.0.22:8080/api/attention', {
                         method: 'post',
                         });
                         console.log('Completed!', response);
